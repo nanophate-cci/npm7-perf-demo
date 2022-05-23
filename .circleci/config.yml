@@ -5,8 +5,7 @@ orbs:
 
 jobs:
   build:
-    docker:
-      - image: cimg/node:16.15
+    machine: true
     steps:
       - checkout
       - run: node --version
