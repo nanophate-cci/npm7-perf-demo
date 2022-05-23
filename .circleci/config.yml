@@ -1,0 +1,14 @@
+version: 2.1
+
+orbs: 
+  node: circleci/node@5.0.2
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:18.2.0
+    steps:
+      - checkout
+      - run: node --version
+      - run: npm --version
+      - run: npm install
